@@ -1,10 +1,50 @@
-<html>
+<! DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <!---
+    Dear web-weary soul,
+
+    Hey, thanks for taking the time to look at the source-code to my resume,
+    I'll admit I'm actually pretty proud of this and take delight at people
+    trying to grok how it works.
+
+    However, this resume is actually auto-magickally generated, thus I
+    *really* wouldn't recommend taking at look at the resulting single HTML
+    file.
+
+    Instead, take a look at the source from which it was generated. This
+    source can be found online at https://bitbucket.org/criswell/sam_resume .
+    This online repo is actually a Mercurial (hg) repository, thus you will
+    need a working hg install in order to check it out.
+
+    Additionally, the resume is generated using a custom Jinja-based build
+    script. So, in order to build it, you will want to have Python installed
+    and the Jinja (http://jinja.pocoo.org/) module installed. The easiest way
+    to do this in *my* opinion would be to use virtualenv, but I leave that as
+    and excersize for the reader.
+
+    But, for reference, the most current version of this resume can always be
+    built using the commands (under a standard Linux/Unix system):
+
+      hg clone https://bitbucket.org/criswell/sam_resume/
+      cd sam_resume
+      make clean ; make
+
+    Again, thanks for the interest in my resume's source!
+
+                - Sam
+  -->
+
+  <!---
+      This document was generated on {{ builder.date }},
+      using changeset ID {{ builder.id }}, and tag {{ builder.tag }}.
+  -->
+
   <head>
     <title>Resume for Samuel Nils Hart</title>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8' />
     {% include 'css/000.html' %}
-    <script type="text/javascript">
-      {% include 'js/000.html' %}
-    </script>
+    {% include 'js/000.html' %}
   <body>
     {% include 'job_exp/000.html' %}
   </body>
