@@ -1,0 +1,21 @@
+/* Common styles for all render devices */
+
+@media all {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        border: 0;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
