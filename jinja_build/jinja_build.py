@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys
+import sys, datetime
 from jinja2 import Template
 from jinja2 import FileSystemLoader
 from jinja2.environment import Environment
@@ -29,6 +29,11 @@ if len(sys.argv) == 3:
     env.loader = FileSystemLoader(p)
 else:
     env.loader = FileSystemLoader(".")
+
+builder = {
+            'date' : '%s' % datetime.datetime.now(),
+            '' HERE I AM JH
+        }
 
 template = env.from_string(strTemplate)
 rendered = template.render()
