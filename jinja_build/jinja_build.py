@@ -1,17 +1,30 @@
 #!/usr/bin/env python
 
 import sys, datetime
-from jinja2 import Template
-from jinja2 import FileSystemLoader
-from jinja2.environment import Environment
+try:
+    from jinja2 import Template
+    from jinja2 import FileSystemLoader
+    from jinja2.environment import Environment
+except ImportError:
+    print >> sys.stderr, "Uh-oh! Looks like you don't have jinja2 installed!"
+    print >> sys.stderr, "Go to http://jinja.pocoo.org/ and install it please!"
+    sys.exit(1)
+
+try:
+    import hgapi
+except ImportError:
+    print >> sys.stderr, "Uh-oh! Looks like you don't have hgapi installed!"
+    print >> sys.stderr, "Go to https://bitbucket.org/haard/hgapi and install it please!"
+    sys.exit(1)
 
 def usage():
-    print "jinga_build.py file.html <templateDirectories>"
-    print "\nBuilds a file specified by 'file.html', dumping to STDOUT the resulting HTML."
+    print "jinga_build.py file.html repo_directory <templateDirectories>"
+    print "\nBuilds a file specified by 'file.html', dumping to STDOUT the resulting HTML.\n"
     print "<templateDirectories> is one or more directories for templates to be housed,"
-    print "separated by commas."
+    print "separated by commas.\n"
+    print "'repo_directory' is the path to the hg repo containing the resume builder."
 
-if len(sys.argv) < 2 or len(sys.argv) > 3:
+if len(sys.argv) < 2 or len(sys.argv) > 4:
     usage()
     sys.exit()
 
@@ -20,8 +33,9 @@ templateFile = open(filename, 'r')
 rawTemplate = templateFile.readlines()
 templateFile.close()
 
+repo = hgapi.Repo(sys.argv[2])
+
 strTemplate = "".join(rawTemplate)
-#print strTemplate
 
 env = Environment()
 if len(sys.argv) == 3:
@@ -32,11 +46,12 @@ else:
 
 builder = {
             'date' : '%s' % datetime.datetime.now(),
-            '' HERE I AM JH
+            'id' : repo.hg_id(),
+            'branch' : repo.hg_branch()
         }
 
 template = env.from_string(strTemplate)
-rendered = template.render()
+rendered = template.render(builder=builder)
 
 print rendered
 

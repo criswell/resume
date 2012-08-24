@@ -8,7 +8,7 @@ OUTPUT=output/index.html
 
 $(OUTPUT): $(START_SRC)
 	mkdir -p output/
-	$(BUILD) $(START_SRC) $(ALL_INC_DIRS) > $(OUTPUT)
+	$(BUILD) $(START_SRC) . $(ALL_INC_DIRS) > $(OUTPUT)
 
 .PHONY: clean
 
