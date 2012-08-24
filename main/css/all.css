@@ -17,5 +17,8 @@
     a:hover {
         text-decoration: none;
     }
+    .details {
+        display: none;
+    }
 }
 
