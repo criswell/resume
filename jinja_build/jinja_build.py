@@ -10,12 +10,12 @@ except ImportError:
     print >> sys.stderr, "Go to http://jinja.pocoo.org/ and install it please!"
     sys.exit(1)
 
+hg_id = 'Unknown'
+hg_branch = 'Unknown'
 try:
     import hgapi
 except ImportError:
-    print >> sys.stderr, "Uh-oh! Looks like you don't have hgapi installed!"
-    print >> sys.stderr, "Go to https://bitbucket.org/haard/hgapi and install it please!"
-    sys.exit(1)
+    hgapi = None
 
 def usage():
     print "jinga_build.py file.html repo_directory <templateDirectories>"
@@ -33,21 +33,24 @@ templateFile = open(filename, 'r')
 rawTemplate = templateFile.readlines()
 templateFile.close()
 
-repo = hgapi.Repo(sys.argv[2])
+if hgapi:
+    repo = hgapi.Repo(sys.argv[2])
+    hg_id = repo.hg_id()
+    hg_branch = repo.hg_branch()
 
 strTemplate = "".join(rawTemplate)
 
 env = Environment()
-if len(sys.argv) == 3:
-    p = sys.argv[2].split(',')
+if len(sys.argv) == 4:
+    p = sys.argv[3].split(',')
     env.loader = FileSystemLoader(p)
 else:
     env.loader = FileSystemLoader(".")
 
 builder = {
             'date' : '%s' % datetime.datetime.now(),
-            'id' : repo.hg_id(),
-            'branch' : repo.hg_branch()
+            'id' : hg_id,
+            'branch' : hg_branch
         }
 
 template = env.from_string(strTemplate)
