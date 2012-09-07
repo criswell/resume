@@ -46,7 +46,12 @@
 {% include 'css/000.html' %}
 {% include 'js/000.html' %}
   <body>
-{% include 'job_exp/000.html' %}
+    {% include 'header.html' %}
+    <div class="resume_body">
+      {% include 'summary.html' %}
+      {% include 'job_exp/000.html' %}
+      {% include 'oss_exp/000.html' %}
+    </div>
   </body>
 </html>
 

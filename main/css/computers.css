@@ -1,0 +1,144 @@
+/* Desktops and laptops ----------- */
+
+@media only screen 
+and (min-width : 1224px) {
+    /** header definition **/
+        .header {
+            padding: 10px;
+            background: #ebebeb;
+            border-bottom: 1px dashed #555;
+        }
+        h1.header_title {
+            float: left;
+            font-size: 200%;
+        }
+        p.contact {
+            text-align: right;
+            font-style: italic;
+            font-size: 85%;
+        }
+
+        /** body definitions **/
+        body {
+            background: #b8b8b8;
+            padding: 20px;
+            color: #000000;
+            font-family: helvetica, sans-serif;
+            font-size: 10pt;
+        }
+
+        a { color: #005e9a; }
+
+        div { margin-bottom: 10px; }
+
+        .resume_body {
+            padding: 10px;
+            background: #FFF;
+            border: 1px dotted #555;
+            height: 100%;
+        }
+
+        .summary_block {
+            left: 34px;
+            padding: 4px;
+        }
+
+        .summary_block h2 {
+            font-size: 150%;
+            float: left;
+            margin-left: 4px;
+            margin-right: 50px;
+            padding-bottom: 5px;
+        }
+
+        .summary_block a {
+            color: #0e11a6;
+        }
+
+        .summary {
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .experience_block {
+
+        }
+
+        .experience_title {
+            position: absolute;
+            left: 38px;
+            width: 20%;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .experience_title h2 {
+            font-size: 125%;
+        }
+
+        .experience_title a {
+            color: #0e11a6;
+        }
+
+        .experience_details {
+            position: relative;
+            left: 22%;
+            width: 78%;
+            text-align: left;
+            vertical-align: top;
+            padding-bottom: 4px;
+        }
+
+        .experience_details h3 {
+            font-size: 110%;
+            padding-top: 4px;
+        }
+
+        .experience h3 {
+            font-size: 110%;
+        }
+
+        .timeframe {
+            float: left;
+            text-align: left;
+            font-size: 80%;
+        }
+
+        .company {
+            font-size: 80%;
+            text-align: right;
+            padding-right: 4px;
+            padding-bottom: 2px;
+        }
+
+        /** foot **/
+        .foot {
+            font-size: 70%;
+        }
+
+        .foot p {
+            text-align: right;
+        }
+
+        .foot a {
+            color: #0b0d53;
+        }
+
+        .update {
+            color: #696969;
+            font-style: italic;
+        }
+
+        .quicklinks ul, .quicklinks li {
+            list-style: none;
+            display: inline;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .quicklinks a {
+            color: #444444;
+            font-size: 70%;
+            text-decoration: none;
+        }
+}
