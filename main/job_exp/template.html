@@ -1,15 +1,20 @@
 <div class="experience">
-  <h3>Job Title</h3>
-  <p class="timeframe">Timeframe</p>
+  <h3>{% block title %}{% endblock %}</h3>
+  <p class="timeframe">{% block timeframe %}{% endblock %}</p>
   <p class="company">
-     Company, Location<br />
-     <a href="COMPANY_URL">COMPANY_URL</a>
+    {% block company %}
+    {% endblock %}
   </p>
   <p class="desc">
-  DESCRIPTION
+    {% block desc %}
+    {% endblock %}
   </p>
-  <a href="#" onclick="unFlip('ID');">More details</a>
-  <p class="details">
-  DETAILS
-  </p>
+  {% if flipper %}
+    <a class="flipper" href="#" onclick="unFlip('ge');">More details</a>
+    <div class="details" id="{% block flipper_id %}{% endblock %}">
+      {% block flipper_contents %}
+      {% endblock %}
+    </div>
+  {% endif %}
 </div>
+
