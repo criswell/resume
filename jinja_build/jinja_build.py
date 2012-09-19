@@ -12,6 +12,7 @@ except ImportError:
 
 hg_id = 'Unknown'
 hg_branch = 'Unknown'
+hg_update = 'Unknown'
 try:
     import hgapi
 except ImportError:
@@ -37,6 +38,7 @@ if hgapi:
     repo = hgapi.Repo(sys.argv[2])
     hg_id = repo.hg_id()
     hg_branch = repo.hg_branch()
+    hg_update = repo.revision(hg_id)
 
 strTemplate = "".join(rawTemplate)
 
@@ -50,7 +52,8 @@ else:
 builder = {
             'date' : '%s' % datetime.datetime.now(),
             'id' : hg_id,
-            'branch' : hg_branch
+            'branch' : hg_branch,
+            'updated' : hg_update.date
         }
 
 template = env.from_string(strTemplate)
