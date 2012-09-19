@@ -1,18 +1,17 @@
-        <div class="experience">
-            <h3>Project Director</h3>
-            <p class="timeframe">Jul. 2001 - Oct. 2007</p>
-            <p class="company">
-                Tux4Kids<br />
-                <a href="http://www.tux4kids.com/">http://www.tux4kids.com/</a>
-            </p>
-            <p class="desc">
-                Free-Software project founder. Acting director of overall project
-                and lead developer/project manager of many sub-projects.
-                Programming (C/C++), Application packaging/promotion, web design.
-                Tux4Kids is a part of a family of Open Source/Free Software
-                projects under the Open Source Educational Foundation
-                (<a href="http://www.osef.org/">http://www.osef.org/</a>)
-                including Knoppix4Kids and Debian Jr. While at Tux4Kids, led project
-                development for a number of educational video games.
-            </p>
-        </div>
+{% extends "templates/exp.html" %}
+{% block title %}Project Director{% endblock %}
+{% block timeframe %}Jul. 2001 - Oct. 2007{% endblock %}
+{% block company %}
+    Tux4Kids<br />
+    <a href="http://www.tux4kids.com/">http://www.tux4kids.com/</a>
+{% endblock %}
+{% block desc %}
+    Free-Software project founder. Acting director of overall project
+    and lead developer/project manager of many sub-projects.
+    Programming (C/C++), Application packaging/promotion, web design.
+    Tux4Kids is a part of a family of Open Source/Free Software
+    projects under the Open Source Educational Foundation
+    (<a href="http://www.osef.org/">http://www.osef.org/</a>)
+    including Knoppix4Kids and Debian Jr. While at Tux4Kids, led project
+    development for a number of educational video games.
+{% endblock %}

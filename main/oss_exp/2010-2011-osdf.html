@@ -1,15 +1,14 @@
-<div class="experience">
-  <h3>Contributor</h3>
-  <p class="timeframe">Oct. 2010 - Present</p>
-  <p class="company">
-    The Open Source Democracy Foundation<br />
-    <a href="http://theosdf.org/">http://theosdf.org/</a>
-  </p>
-  <p class="desc">
-    The OSDF is an organization "committed to improving our government
-    by harnessing the Internet as a tool for education and advocacy." It
-    is a "political action committee" which utilities the Open Source
-    process. Member of the OSDF development team and contributing
-    member to the PAC itself.
-  </p>
-</div>
+{% extends "templates/exp.html" %}
+{% block title %}Contributor{% endblock %}
+{% block timeframe %}Oct. 2010 - Present{% endblock %}
+{% block company %}
+  The Open Source Democracy Foundation<br />
+  <a href="http://theosdf.org/">http://theosdf.org/</a>
+{% endblock %}
+{% block desc %}
+  The OSDF is an organization "committed to improving our government
+  by harnessing the Internet as a tool for education and advocacy." It
+  is a "political action committee" which utilities the Open Source
+  process. Member of the OSDF development team and contributing
+  member to the PAC itself.
+{% endblock %}
