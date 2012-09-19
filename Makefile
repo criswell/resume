@@ -1,6 +1,6 @@
 BUILD=python jinja_build/jinja_build.py
 
-ALL_INC_DIRS=main/,main/css/,main/js/,main/job_exp/,main/oss_exp/
+ALL_INC_DIRS=main/,main/css/,main/js/,main/job_exp/,main/oss_exp/,main/templates/
 
 START_SRC=main/index.html
 
