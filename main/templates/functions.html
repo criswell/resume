@@ -1,0 +1,7 @@
+{% macro link(url, text='') -%}
+	{% if text='' %}
+		<a href="{{ url }}">{{ url }}</a>
+	{% else %}
+		<a href="{{ url }}">{{ text }}</a>
+	{% endif %}
+{%- endmacro %}
