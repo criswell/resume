@@ -1,5 +1,5 @@
 {% macro link(url, text='') -%}
-	{% if text='' %}
+	{% if text == '' %}
 		<a href="{{ url }}">{{ url }}</a>
 	{% else %}
 		<a href="{{ url }}">{{ text }}</a>
@@ -12,4 +12,8 @@
 	  <li>{{ item }}</li>
 	{% endfor %}
   </ul>
+{%- endmacro %}
+
+{% macro br() -%}
+<br />
 {%- endmacro %}
