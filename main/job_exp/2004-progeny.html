@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Project Manager on Platform Engineering Team{% endblock %}
 {% block timeframe %}Oct. 2004 - Apr. 2007{% endblock %}
 {% block company %}
 Progeny Linux Systems{{ br() }}
-<a href="http://j.mp/ProgenyLinux">http://j.mp/ProgenyLinux</a>
+{{ link("http://j.mp/ProgenyLinux") }}
 {% endblock %}
 {% block desc %}
 Development of Customized Linux distributions on x86, ARM, and PPC platforms. Starting
@@ -18,14 +19,8 @@ arbitrary Linux distribution (e.g., Debian, CentOS). Project manager for RPM-bas
 products. Progeny's Open-Source/Free-Software code can be found online
 <a href="http://leftovers.sourceforge.net/">here</a>.
 {% endblock %}
-{% set flipper=True %}
+{% set flipper=False %}
 {% set flipper_id="progeny" %}
 {% block flipper_contents %}
-<ul>
-  <li>Python development</li>
-  <li>Bash/shell scripting development</li>
-  <li>Makefiles and build tools</li>
-  <li>Documentation meeting federal healthcare standards</li>
-</ul>
 {% endblock %}
 

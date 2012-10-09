@@ -1,4 +1,5 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Consultant{% endblock %}
 {% block timeframe %}Dec. 2003 - Jan. 2005{% endblock %}
 {% block company %}
@@ -16,14 +17,8 @@
                 Webservers, as well as custom programming and scripting solutions.
 
 {% endblock %}
-{% set flipper=True %}
+{% set flipper=False %}
 {% set flipper_id="bigman" %}
 {% block flipper_contents %}
-<ul>
-  <li>Python development</li>
-  <li>Bash/shell scripting development</li>
-  <li>Makefiles and build tools</li>
-  <li>Documentation meeting federal healthcare standards</li>
-</ul>
 {% endblock %}
 
