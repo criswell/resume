@@ -1,10 +1,11 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Support Systems Analyst{% endblock %}
 {% block timeframe %}Oct. 2001 - Oct. 2004{% endblock %}
 {% block company %}
 University of Arizona Physics Department- Tucson, AZ{{ br() }}
-                <a href="http://www.physics.arizona.edu/">http://www.physics.arizona.edu/</a>
-                {% endblock %}
+{{ link("http://www.physics.arizona.edu/") }}
+{% endblock %}
 {% block desc %}
 Integration and maintenance of 60-100 desktop PCs and laptops
                 running various Microsoft Operating Systems, ensuring these PCs
@@ -20,14 +21,8 @@ Integration and maintenance of 60-100 desktop PCs and laptops
 
 
 {% endblock %}
-{% set flipper=True %}
+{% set flipper=False %}
 {% set flipper_id="uaphys2" %}
 {% block flipper_contents %}
-<ul>
-  <li>Python development</li>
-  <li>Bash/shell scripting development</li>
-  <li>Makefiles and build tools</li>
-  <li>Documentation meeting federal healthcare standards</li>
-</ul>
 {% endblock %}
 

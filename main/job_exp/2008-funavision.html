@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Firmware Engineer{% endblock %}
 {% block timeframe %}May 2012 - present{% endblock %}
 {% block company %}
-     GE Healthcare, Waukesha, WI{{ br() }}
-     <a href="http://www.gehealthcare.com/">"http://www.gehealthcare.com</a>
+GE Healthcare, Waukesha, WI{{ br() }}
+{{ link("http://www.gehealthcare.com/") }}
 {% endblock %}
 {% block desc %}
   Implemented and documented a testing infrastructure utilized by firmware
@@ -16,10 +17,8 @@
 {% set flipper=True %}
 {% set flipper_id="funavision" %}
 {% block flipper_contents %}
-    <ul>
-      <li>Python development</li>
-      <li>Bash/shell scripting development</li>
-      <li>Makefiles and build tools</li>
-      <li>Documentation meeting federal healthcare standards</li>
-    </ul>
+{{ list (["Python development",
+  "Bash/shell scripting development",
+  "Makefiles and build tools",
+  "Documentation meeting federal healthcare standards"]) }}
 {% endblock %}

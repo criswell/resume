@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Linux/Unix Instructor{% endblock %}
 {% block timeframe %}Apr. 2002 - Jul. 2004{% endblock %}
 {% block company %}
 University of Arizona, Extended University- Tucson, AZ{{ br() }}
-                <a href="http://outreachcollege.arizona.edu/">http://outreachcollege.arizona.edu/</a>
+{{ link("http://outreachcollege.arizona.edu/") }}
 {% endblock %}
 {% block desc %}
 
@@ -19,13 +20,7 @@ Instruction and course design for the Extended University UNIX,
                 <a href="http://www.samhart.com/classnotes/">http://www.samhart.com/classnotes/</a>.
 
 {% endblock %}
-{% set flipper=True %}
+{% set flipper=False %}
 {% set flipper_id="uaext" %}
 {% block flipper_contents %}
-<ul>
-  <li>Python development</li>
-  <li>Bash/shell scripting development</li>
-  <li>Makefiles and build tools</li>
-  <li>Documentation meeting federal healthcare standards</li>
-</ul>
 {% endblock %}

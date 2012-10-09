@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Linux Standard Base Engineer{% endblock %}
 {% block timeframe %}Mar. 2007 - Apr. 2008{% endblock %}
 {% block company %}
-  Linux Foundation{{ br() }}
-  <a href="http://www.linux-foundation.org/">http://www.linux-foundation.org/</a>
+Linux Foundation{{ br() }}
+{{ link("http://www.linux-foundation.org/") }}
 {% endblock %}
 {% block desc %}
 Member of the Linux Standard Base (LSB) team, a group with the goal of "[developing]..
@@ -16,13 +17,7 @@ for the integration of Java component technologies into the LSB. Laid down found
 for cross-distribution package management schema designed to provide third-party ISV
 installation tools low-level access to underlying package management systems.
 {% endblock %}
-{% set flipper=True %}
+{% set flipper=False %}
 {% set flipper_id="lfft" %}
 {% block flipper_contents %}
-<ul>
-  <li>-</li>
-  <li>Bash/shell scripting development</li>
-  <li>Makefiles and build tools</li>
-  <li>Documentation meeting federal healthcare standards</li>
-</ul>
 {% endblock %}

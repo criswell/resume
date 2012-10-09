@@ -1,32 +1,31 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Linux Cloud Computing Integration Engineer{% endblock %}
 {% block timeframe %}Oct. 2010 - May 2012{% endblock %}
 {% block company %}
-     Intel, Hillsboro, OR{{ br() }}
-     <a href="http://www.intel.com/">http://www.intel.com/</a>
+Intel, Hillsboro, OR{{ br() }}
+{{ link("http://www.intel.com/") }}
 {% endblock %}
 {% block desc %}
-  Principal developer on a cross-platform suite to integrate Linux and Windows-
-  based systems into a cloud computing infrastructure inside the Enterprise
-  Integration Labs. Initial work was on a C/C++ daemon suite to act as
-  counterpart to existing Windows C# service, however both were later scrapped
-  in favor of a unified Python-based cross-platform daemon/service which
-  performed the same roles as previous two applications. In the end, authored
-  39k lines C/C++, 18k lines BASH/shell, and 14k lines Python. Cross-platform
-  support included the Linux-flavors of  Debian, Ubuntu, RHEL, CentOS, SuSE,
-  SLES, SLED, Xen and ESX/ESXi, and the Windows-flavors of XP, Server 2003,
-  Vista, and 7.
+Principal developer on a cross-platform suite to integrate Linux and Windows-
+based systems into a cloud computing infrastructure inside the Enterprise
+Integration Labs. Initial work was on a C/C++ daemon suite to act as
+counterpart to existing Windows C# service, however both were later scrapped
+in favor of a unified Python-based cross-platform daemon/service which
+performed the same roles as previous two applications. In the end, authored
+39k lines C/C++, 18k lines BASH/shell, and 14k lines Python. Cross-platform
+support included the Linux-flavors of  Debian, Ubuntu, RHEL, CentOS, SuSE,
+SLES, SLED, Xen and ESX/ESXi, and the Windows-flavors of XP, Server 2003,
+Vista, and 7.
 {% endblock %}
 {% set flipper=True %}
 {% set flipper_id="intel2011" %}
 {% block flipper_contents %}
-    <ul>
-      <li>C/C++ development</li>
-      <li>Python development</li>
-      <li>Bash/shell scripting development</li>
-      <li>Cross-platform development as daemon and service</li>
-      <li>Makefiles and build tools</li>
-      <li>Custom cross-platform Python installer</li>
-      <li>Documentation using Doxygen</li>
-    </ul>
+{{ list(["C/C++ development",
+      "Python development",
+      "Bash/shell scripting development",
+      "Cross-platform development as daemon and service",
+      "Makefiles and build tools",
+      "Custom cross-platform Python installer",
+      "Documentation using Doxygen"]) }}
 {% endblock %}
