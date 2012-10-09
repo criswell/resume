@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Project Director{% endblock %}
 {% block timeframe %}Jul. 2001 - Oct. 2007{% endblock %}
 {% block company %}
-    Tux4Kids<br />
-    <a href="http://www.tux4kids.com/">http://www.tux4kids.com/</a>
+Tux4Kids{{ br() }}
+{{ link("http://www.tux4kids.com/") }}
 {% endblock %}
 {% block desc %}
     Free-Software project founder. Acting director of overall project
@@ -11,7 +12,7 @@
     Programming (C/C++), Application packaging/promotion, web design.
     Tux4Kids is a part of a family of Open Source/Free Software
     projects under the Open Source Educational Foundation
-    (<a href="http://www.osef.org/">http://www.osef.org/</a>)
+    ({{ link("http://www.osef.org/") }})
     including Knoppix4Kids and Debian Jr. While at Tux4Kids, led project
     development for a number of educational video games.
 {% endblock %}

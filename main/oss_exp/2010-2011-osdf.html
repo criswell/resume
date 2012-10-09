@@ -1,9 +1,10 @@
 {% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
 {% block title %}Contributor{% endblock %}
 {% block timeframe %}Oct. 2010 - Present{% endblock %}
 {% block company %}
-  The Open Source Democracy Foundation<br />
-  <a href="http://theosdf.org/">http://theosdf.org/</a>
+The Open Source Democracy Foundation{{ br() }}
+{{ link("http://theosdf.org/") }}
 {% endblock %}
 {% block desc %}
   The OSDF is an organization "committed to improving our government
