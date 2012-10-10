@@ -1,0 +1,20 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Experimental Laboratory Technical Assistant{% endblock %}
+{% block timeframe %}Aug. 1996 - Jul. 1998{% endblock %}
+{% block company %}
+University of Arizona Physics Department- Tucson, AZ{{ br() }}
+{{ link("http://www.physics.arizona.edu/") }}
+{% endblock %}
+{% block desc %}
+Physics laboratory setup, stocking, and equipment repair.
+Design and development of laboratory inventory and
+experiment database. Database allowed all laboratory
+setup information, equipment status and location, as well
+as assignments to be stored, queried, modified and tracked.
+{% endblock %}
+{% set flipper=False %}
+{% set flipper_id="uapaslab" %}
+{% block flipper_contents %}
+{% endblock %}
+
