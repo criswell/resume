@@ -1,0 +1,25 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Linux Software Consultant{% endblock %}
+{% block timeframe %}Aug. 2000 - Jan. 2001{% endblock %}
+{% block company %}
+Intel, American Fork, UT{{ br() }}
+{{ link("http://www.intel.com/") }}
+{% endblock %}
+{% block desc %}
+Manager of testing crew for an embedded Linux device. Lead
+developer of a distributed P2P testing suite. In charge of
+several other Linux developers working on the testing suite.
+Testing suite was cross-platform, but developed primarily
+under Red Hat Linux. It was written in Perl, with components
+in JSP and a CGI web-interface. Suite was a P2P distributed
+computing project that could turn unused embedded Linux
+devices in the office into a cluster for testing the device
+API. Was hired to solve API testing problem, and this suite
+was my solution.
+{% endblock %}
+{% set flipper=False %}
+{% set flipper_id="intel2" %}
+{% block flipper_contents %}
+{% endblock %}
+

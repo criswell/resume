@@ -1,0 +1,20 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Administration Technician{% endblock %}
+{% block timeframe %}Jul. 1998 - Aug. 2000{% endblock %}
+{% block company %}
+University of Arizona Physics Department- Tucson, AZ{{ br() }}
+{{ link("http://www.physics.arizona.edu/") }}
+{% endblock %}
+{% block desc %}
+System administration and software design. Developed database
+application for storage of Physics Graduate Student information.
+Managed undergraduate computer lab as well as maintained
+several Unix servers. Acted as liaison between technical
+support and general staff.
+{% endblock %}
+{% set flipper=False %}
+{% set flipper_id="uapassys" %}
+{% block flipper_contents %}
+{% endblock %}
+
