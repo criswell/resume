@@ -1,0 +1,15 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Contributor{% endblock %}
+{% block timeframe %}1999 - 2003{% endblock %}
+{% block company %}
+Simple DirectMedia Layer Library{{ br() }}
+{{ link("http://www.libsdl.org") }}
+{% endblock %}
+{% block desc %}
+Code contributor for  SDL. Submitted patches to
+code and documentation as well as library usage
+examples under C, C# (Mono), and Perl. Was maintainer
+of the SDL/KDevelop Mini-HOWTO during the KDevelop
+1.x development cycle.
+{% endblock %}
