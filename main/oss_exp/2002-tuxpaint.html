@@ -1,0 +1,18 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Contributor{% endblock %}
+{% block timeframe %}2002 - 2003{% endblock %}
+{% block company %}
+TuxPaint{{ br() }}
+{{ link("http://www.newbreedsoftware.com/tuxpaint/") }}
+{% endblock %}
+{% block desc %}
+Code and artwork contributor to TuxPaint. TuxPaint
+is a part of the Tux4Kids Free Software project. It
+is published under the GNU GPL. Original artwork for
+TuxPaint came from animations and stills unused by
+previous Tux4Kids projects. Bill Kendrick originally
+suggested TuxPaint on a Tux4Kids mailing list, and he
+and I went back and forth discussing ideas and
+brainstorming.
+{% endblock %}
