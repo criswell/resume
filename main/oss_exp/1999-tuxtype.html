@@ -1,0 +1,17 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer/Project Manager{% endblock %}
+{% block timeframe %}1999 - 2002{% endblock %}
+{% block company %}
+Tux Typing{{ br() }}
+{{ link("http://tuxtype.sf.net/") }}
+{% endblock %}
+{% block desc %}
+Tux Typing is an Open Source educational typing tutor
+developed under Linux. Using the SDL libraries it was
+also ported to the Win32, Mac OS, and BeOS platforms.
+Served as lead developer until shortly after the 1.0
+stable release. Has since become part of the Tux4Kids
+Free Software project. Tux Typing is published under
+the GNU GPL.
+{% endblock %}
