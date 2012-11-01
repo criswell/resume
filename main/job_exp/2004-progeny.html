@@ -19,8 +19,20 @@ arbitrary Linux distribution (e.g., Debian, CentOS). Project manager for RPM-bas
 products. Progeny's Open-Source/Free-Software code can be found online
 <a href="http://leftovers.sourceforge.net/">here</a>.
 {% endblock %}
-{% set flipper=False %}
+{% set flipper=True %}
 {% set flipper_id="progeny" %}
 {% block flipper_contents %}
+{{ list(["C/C++ development",
+  "Python development",
+  "Shell scripting",
+  "Perl development",
+  "Linux distribution development",
+  "Linux kernel development",
+  "Large-scale package customization",
+  "Assisted in the creation of mobile Linux OS that became Meego/Tizen",
+  "TELCO Linux OS creation",
+  "Embedded Linux OS creation",
+  "Security appliance Linux creation",
+  "File server appliance Linux creation"]) }}
 {% endblock %}
 
