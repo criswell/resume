@@ -95,8 +95,7 @@ and (min-width : 780px) {
             float: right;
         }
 
-        ul.details {
-            display: inline;
+        .details ul {
             text-align: right;
         }
 
