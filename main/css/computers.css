@@ -95,6 +95,11 @@ and (min-width : 780px) {
             float: right;
         }
 
+        ul.details {
+            display: inline;
+            text-align: right;
+        }
+
         .experience_details h3 {
             font-size: 110%;
             padding-top: 4px;
