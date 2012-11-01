@@ -99,6 +99,15 @@ and (min-width : 780px) {
             text-align: right;
         }
 
+        .details li:before {
+            content: "\0020 \0020 \00BB \0020";
+        }
+
+        .details li {
+            display: inline;
+            font-size: 80%;
+        }
+
         .experience_details h3 {
             font-size: 110%;
             padding-top: 4px;
