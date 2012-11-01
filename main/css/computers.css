@@ -96,7 +96,7 @@ and (min-width : 780px) {
         }
 
         .details ul {
-            text-align: right;
+            border-bottom: 1px solid #7e7e7e;
         }
 
         .details li:before {
