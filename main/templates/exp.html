@@ -10,7 +10,7 @@
     {% endblock %}
   </p>
   {% if flipper %}
-    <a class="flipper" href="#" onclick="unFlip('{{ flipper_id }}');">More details</a>
+    <a class="flipper" href="#{{ flipper_id}}" onclick="unFlip('{{ flipper_id }}');">More details</a>
     <div class="details" id="{{ flipper_id }}">
       {% block flipper_contents %}
       {% endblock %}
