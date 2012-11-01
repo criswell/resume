@@ -89,6 +89,12 @@ and (min-width : 780px) {
             padding-bottom: 4px;
         }
 
+        .flipper {
+            text-align: right;
+            font-size: 70%;
+            float: right;
+        }
+
         .experience_details h3 {
             font-size: 110%;
             padding-top: 4px;
