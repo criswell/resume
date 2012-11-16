@@ -5,7 +5,7 @@ and (min-width : 780px) {
     /** header definition **/
         .header {
             padding: 10px;
-            background: #ebebeb;
+            background: #ebebfc;
             border-bottom: 1px dashed #555;
         }
         h1.header_title {
@@ -20,7 +20,7 @@ and (min-width : 780px) {
 
         /** body definitions **/
         body {
-            background: #b8b8b8;
+            background: #b8b8ef;
             padding: 20px;
             color: #000000;
             font-family: helvetica, sans-serif;
@@ -33,7 +33,7 @@ and (min-width : 780px) {
 
         .resume_body {
             padding: 10px;
-            background: #FFF;
+            background: #eeF;
             border: 1px dotted #555;
             height: 100%;
         }
