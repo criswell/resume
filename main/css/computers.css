@@ -5,7 +5,6 @@ and (min-width : 780px) {
     /** header definition **/
         .header {
             padding: 10px;
-            background: #ebebfc;
             border-bottom: 1px dashed #555;
         }
         h1.header_title {
@@ -20,14 +19,10 @@ and (min-width : 780px) {
 
         /** body definitions **/
         body {
-            background: #b8b8ef;
             padding: 20px;
-            color: #000000;
             font-family: helvetica, sans-serif;
             font-size: 10pt;
         }
-
-        a { color: #005e9a; }
 
         div { margin-bottom: 10px; }
 
@@ -51,10 +46,6 @@ and (min-width : 780px) {
             padding-bottom: 5px;
         }
 
-        .summary_block a {
-            color: #0e11a6;
-        }
-
         .summary {
             margin-left: 4px;
             margin-right: 4px;
@@ -74,10 +65,6 @@ and (min-width : 780px) {
 
         .experience_title h2 {
             font-size: 125%;
-        }
-
-        .experience_title a {
-            color: #0e11a6;
         }
 
         .experience_details {
@@ -139,12 +126,8 @@ and (min-width : 780px) {
             text-align: right;
         }
 
-        .foot a {
-            color: #0b0d53;
-        }
 
         .update {
-            color: #696969;
             font-style: italic;
         }
 
@@ -156,8 +139,6 @@ and (min-width : 780px) {
         }
 
         .quicklinks a {
-            color: #444444;
             font-size: 70%;
-            text-decoration: none;
         }
 }

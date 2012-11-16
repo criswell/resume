@@ -20,5 +20,38 @@
     .details {
         display: none;
     }
+
+    /** Standard color settings **/
+    .header {
+        background: #ebebfc;
+    }
+
+    body {
+        background: #b8b8ef;
+        color: #000;
+    }
+
+    a { color: #005e9a; }
+
+    .summary_block a {
+        color: #0e11a6;
+    }
+
+    .experience_title a {
+        color: #0e11a6;
+    }
+
+    .foot a {
+        color: #0b0d53;
+    }
+
+    .update {
+        color: #696969;
+    }
+
+    .quicklinks a {
+        color: #444;
+        text-decoration: none;
+    }
 }
 
