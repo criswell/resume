@@ -10,6 +10,9 @@ $(OUTPUT): $(START_SRC)
 	mkdir -p output/
 	$(BUILD) $(START_SRC) . $(ALL_INC_DIRS) > $(OUTPUT)
 
+test: $(OUTPUT)
+	./validate/html5check.py --encoding=utf-8 output/index.html
+
 .PHONY: clean
 
 clean:
