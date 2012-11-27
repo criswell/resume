@@ -84,6 +84,10 @@ and (min-width : 780px) {
 
         .details ul {
             border-bottom: 1px solid #7e7e7e;
+            padding-right: 10px;
+            padding-left: 5px;
+            padding-top: 10px;
+            list-style: none;
         }
 
         .details li:before {
@@ -91,7 +95,7 @@ and (min-width : 780px) {
         }
 
         .details li {
-            display: inline;
+            /* display: inline;*/
             font-size: 80%;
         }
 
