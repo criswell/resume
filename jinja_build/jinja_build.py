@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, datetime
+import sys, datetime, os
 try:
     from jinja2 import Template
     from jinja2 import FileSystemLoader
@@ -49,11 +49,16 @@ if len(sys.argv) == 4:
 else:
     env.loader = FileSystemLoader(".")
 
+use_phone = False
+if os.environ.has_key('USE_PHONE'):
+    use_phone = True
+
 builder = {
             'date' : '%s' % datetime.datetime.now(),
             'id' : hg_id,
             'branch' : hg_branch,
-            'updated' : hg_update.date
+            'updated' : hg_update.date,
+            'use_phone' : use_phone
         }
 
 template = env.from_string(strTemplate)
