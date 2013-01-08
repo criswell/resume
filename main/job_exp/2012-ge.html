@@ -1,0 +1,28 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Firmware Engineer{% endblock %}
+{% block timeframe %}May 2012 - present{% endblock %}
+{% block company %}
+GE Healthcare, Waukesha, WI{{ br() }}
+{{ link("http://www.gehealthcare.com/") }}
+{% endblock %}
+{% block desc %}
+  Implemented and documented a testing infrastructure utilized by firmware
+  teams working on various subsystems of a CT Scanner. Integration of Linux
+  based testing and development environments with VxWorks testing environments.
+  Scripted framework binding multiple diverse technologies providing continuous
+  integration, distributed build, test management, and virtualized workstation
+  features. Developed packaging mechanisms (scripts, specs, makefiles) for
+  automatically building and bundling RPMs for CT Scanner host machines.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="ge" %}
+{% block flipper_contents %}
+{{ list(["Linux Kernel Virtual Machines (KVM)",
+         "QEMU",
+         "Python development",
+         "Bash/shell scripting development",
+         "Makefiles and build tools",
+         "Documentation meeting federal healthcare standards"]) }}
+{% endblock %}
+

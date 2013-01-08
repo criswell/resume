@@ -1,0 +1,14 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer/Project Manager{% endblock %}
+{% block timeframe %}2001 - 2003{% endblock %}
+{% block company %}
+TuxReader{{ br() }}
+{{ link("http://www.tux4kids.com/dm/tuxread/") }}
+{% endblock %}
+{% block desc %}
+TuxReader was intended to be an educational tool
+to assist students learning how to read.
+TuxReader is a part of the Tux4Kids Free Software project.
+It is published under the GNU GPL.
+{% endblock %}

@@ -1,0 +1,23 @@
+<div class="experience">
+  <h3>{% block title %}{% endblock %}</h3>
+  <p class="timeframe">{% block timeframe %}{% endblock %}</p>
+  <p class="company">
+    {% block company %}
+    {% endblock %}
+  </p>
+  <p class="desc">
+    {% block desc %}
+    {% endblock %}
+  </p>
+  {% if flipper %}
+  <a class="flipper" id="flipper_more_{{ flipper_id}}"
+    href="#" onclick="unFlip('{{ flipper_id }}'); return false">More details</a>
+  <a class="flipper" id="flipper_less_{{ flipper_id}}"
+    href="#" onclick="unFlip('{{ flipper_id }}'); return false" style="display: none;">Less details</a>
+    <div class="details" id="{{ flipper_id }}">
+      {% block flipper_contents %}
+      {% endblock %}
+    </div>
+  {% endif %}
+</div>
+

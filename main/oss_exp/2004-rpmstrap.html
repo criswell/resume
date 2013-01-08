@@ -1,0 +1,18 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer/Project Manager{% endblock %}
+{% block timeframe %}Dec. 2004 - Oct. 2007{% endblock %}
+{% block company %}
+rpmstrap{{ br() }}
+{{ link("http://rpmstrap.pimpscript.net/") }}
+{% endblock %}
+{% block desc %}
+rpmstrap is a tool for bootstrapping a basic RPM-based system.
+It is inspired by debootstrap, and allows you to build chroots
+and basic systems from RPM sources. Created while building
+custom RPM-based platforms while working at Progeny Linux
+Systems, it has since been used in everything from Virtual Machine
+building to customized installers. The rpmstrap project is now
+unmaintained, however, its code has been re-appropriated into
+the Xen virtualization software project.
+{% endblock %}

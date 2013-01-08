@@ -1,0 +1,38 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Project Manager on Platform Engineering Team{% endblock %}
+{% block timeframe %}Oct. 2004 - Apr. 2007{% endblock %}
+{% block company %}
+Progeny Linux Systems{{ br() }}
+{{ link("http://j.mp/ProgenyLinux") }}
+{% endblock %}
+{% block desc %}
+Development of Customized Linux distributions on x86, ARM, and PPC platforms. Starting
+with core Debian GNU/Linux, Fedora Core, or CentOS platforms,
+built and maintained customized Operating Systems. Low-level RPM
+development (RPM application, tools, and RPM packages). Python,
+C and Perl development. Anaconda modification and enhancement.
+Creation and maintenance of several Free-Software tools such as
+rpmstrap and smartstrap (rewrite of rpmstrap using the Python-based Smart API).
+Design of a system for creating custom Anaconda-based RPM installation ISOs under any
+arbitrary Linux distribution (e.g., Debian, CentOS). Project manager for RPM-based
+products. Progeny's Open-Source/Free-Software code can be found online
+<a href="http://leftovers.sourceforge.net/">here</a>.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="progeny" %}
+{% block flipper_contents %}
+{{ list(["C/C++ development",
+  "Python development",
+  "Shell scripting",
+  "Perl development",
+  "Linux distribution development",
+  "Linux kernel development",
+  "Large-scale package customization",
+  "Assisted in the creation of mobile Linux OS that became Meego/Tizen",
+  "TELCO Linux OS creation",
+  "Embedded Linux OS creation",
+  "Security appliance Linux creation",
+  "File server appliance Linux creation"]) }}
+{% endblock %}
+

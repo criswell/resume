@@ -1,0 +1,26 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Linux/Unix Instructor{% endblock %}
+{% block timeframe %}Apr. 2002 - Jul. 2004{% endblock %}
+{% block company %}
+University of Arizona, Extended University- Tucson, AZ{{ br() }}
+{{ link("http://outreachcollege.arizona.edu/") }}
+{% endblock %}
+{% block desc %}
+
+Instruction and course design for the Extended University UNIX,
+                Linux, and LDAP Professional and Continuing Education courses.
+                UNIX and Linux courses are taught in three levels, each course
+                occupying eight hour class periods for five weeks. UNIX and Linux
+                courses teach: UNIX/Linux fundamentals, server technologies,
+                and system security. LDAP course teaches OpenLDAP system
+                administration, maintenance and management. Courses were taught
+                from Red Hat Linux, Debian GNU/Linux, Knoppix, and FreeBSD
+                platforms. Classnotes are available online at
+                <a href="http://www.samhart.com/classnotes/">http://www.samhart.com/classnotes/</a>.
+
+{% endblock %}
+{% set flipper=False %}
+{% set flipper_id="uaext" %}
+{% block flipper_contents %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Linux Standard Base Engineer{% endblock %}
+{% block timeframe %}Mar. 2007 - Apr. 2008{% endblock %}
+{% block company %}
+Linux Foundation{{ br() }}
+{{ link("http://www.linux-foundation.org/") }}
+{% endblock %}
+{% block desc %}
+Member of the Linux Standard Base (LSB) team, a group with the goal of "[developing]..
+a set of standards that [increases] compatibility among Linux distributions". Guided
+the LSBsi (Sample Implementation) from an inactive and orphaned project back into
+activity. Developed utilities and modules in Python for ancillary LSB features and
+functionality. Participated in the debates and decisions for the LSB specification
+during the LSB3.2 and LSB4.0 time-lines. Provided work-flow plans and recommendations
+for the integration of Java component technologies into the LSB. Laid down foundation
+for cross-distribution package management schema designed to provide third-party ISV
+installation tools low-level access to underlying package management systems.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="lfft" %}
+{% block flipper_contents %}
+{{ list(["Technical specification writing",
+  "Python development",
+  "Linux distribution development",
+  "Package management development",
+  "DocBook"]) }}
+{% endblock %}

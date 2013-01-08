@@ -1,0 +1,26 @@
+{% macro link(url, text='') -%}
+	{% if text == '' %}
+		<a href="{{ url }}">{{ url }}</a>
+	{% else %}
+		<a href="{{ url }}">{{ text }}</a>
+	{% endif %}
+{%- endmacro %}
+
+{% macro list(items) -%}
+  <ul>
+	{% for item in items %}
+	  <li>{{ item }}</li>
+	{% endfor %}
+  </ul>
+{%- endmacro %}
+
+{% macro br() -%}
+<br />
+{%- endmacro %}
+
+{% macro secHeader(title, secID, hideable=False) -%}
+  <div class="experience_title">
+    <a id="{{ secID }}"><h2>{{ title }}</h2></a>
+    <div class="quicklinks"><ul><li><a href="#top">[ Top ]</a></li></ul></div>
+  </div>
+{%- endmacro %}
