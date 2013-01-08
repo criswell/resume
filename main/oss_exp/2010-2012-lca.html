@@ -1,0 +1,15 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer{% endblock %}
+{% block timeframe %}Oct. 2010 - May. 2012{% endblock %}
+{% block company %}
+lca-gpl{{ br() }}
+{{ link("https://github.com/darring/lca-gpl") }}
+{% endblock %}
+{% block desc %}
+The Linux Client Agent (GPL) is a software suite used to manage a wide
+wide variety of Linux systems in a cloud environment. Software written in
+C/C++, bash, python. Source contains over 400k lines of code and supports
+RHEL, CentOS, SLES/SLED, OpenSUSE, Xen, Ubuntu, Debian, and ESX variants of
+Linux.
+{% endblock %}
