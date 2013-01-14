@@ -26,23 +26,23 @@
         div { margin-bottom: 10px; }
 
         .resume_body {
-            padding: 10px;
+            padding: 5px;
             background: #eeF;
             border: 1px dotted #555;
             height: 100%;
         }
 
         .summary_block {
-            left: 34px;
-            padding: 4px;
+            left: 12px;
+            padding: 2px;
         }
 
         .summary_block h2 {
-            font-size: 150%;
-            float: left;
-            margin-left: 4px;
-            margin-right: 50px;
-            padding-bottom: 5px;
+            font-size: 115%;
+            float: none;
+            margin-left: 1px;
+            margin-right: 10px;
+            padding-bottom: 2px;
         }
 
         .summary {
@@ -55,15 +55,15 @@
         }
 
         .experience_title {
-            position: absolute;
-            left: 38px;
-            width: 20%;
+            position: relative;
+            left: 4px;
+            width: 100%;
             text-align: left;
             vertical-align: top;
         }
 
         .experience_title h2 {
-            font-size: 125%;
+            font-size: 105%;
         }
 
         .experience_details {
