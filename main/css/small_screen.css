@@ -60,6 +60,7 @@
             width: 100%;
             text-align: left;
             vertical-align: top;
+            border: 1px dashed #aeaeae;
         }
 
         .experience_title h2 {
@@ -68,11 +69,11 @@
 
         .experience_details {
             position: relative;
-            left: 22%;
-            width: 78%;
+            left: 4px;
+            width: 95%;
             text-align: left;
             vertical-align: top;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
         }
 
         .flipper {
