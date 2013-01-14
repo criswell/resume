@@ -1,13 +1,13 @@
 /* Smaller screens, mobiles, and tablets ----------- */
 
-@media only screen and (max-device-width:780px) {
+@media handheld, screen and (max-width:780px) {
     /** header definition **/
         .header {
-            /*padding: 10px; */
+            padding: 0px;
             border-bottom: 0px; /* dashed #555;*/
         }
         h1.header_title {
-            /*float: left;*/
+            float: none;
             font-size: 125%;
         }
         p.contact {
@@ -18,7 +18,7 @@
 
         /** body definitions **/
         body {
-            padding: 20px;
+            padding: 0px;
             font-family: helvetica, sans-serif;
             font-size: 10pt;
         }
