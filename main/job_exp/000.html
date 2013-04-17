@@ -1,10 +1,12 @@
 <!--- Work experience segment follows -->
 
-<div class="container">
+<div class="container"><div class="row-fluid">
+<div class="span3">
 {% from "templates/functions.html" import secHeader %}
 
 {{ secHeader("Experience", "workExp") }}
-
+</div>
+<div class="span9">
   {% include '2012-ge.html' %}
   {% include '2011-2012-intel.html' %}
   {% include '2008-funavision.html' %}
@@ -18,6 +20,7 @@
   {% include '1998-ua.html' %}
   <!--  {% include '1996-ua.html' %} -->
 </div>
+</div></div>
 
 <!--- End work experience segment -->
 

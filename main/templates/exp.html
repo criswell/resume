@@ -1,23 +1,36 @@
-<div class="container">
-  <h3>{% block title %}{% endblock %}</h3>
-  <p class="timeframe">{% block timeframe %}{% endblock %}</p>
-  <p class="company">
-    {% block company %}
-    {% endblock %}
-  </p>
-  <p class="desc">
+<div class="row">
+  <div class="span9">
+    <h3>{% block title %}{% endblock %}</h3>
+    <p class="muted"><small>{% block timeframe %}{% endblock %}</small></p>
+  </div>
+  <div class="span3">
+    <address class="text-right">
+      {% block company %}
+      {% endblock %}
+    </address>
+  </div>
+</div>
+<div class="row">
+  <p>
     {% block desc %}
     {% endblock %}
   </p>
   {% if flipper %}
-  <a class="flipper" id="flipper_more_{{ flipper_id}}"
-    href="#" onclick="unFlip('{{ flipper_id }}'); return false">More details</a>
-  <a class="flipper" id="flipper_less_{{ flipper_id}}"
-    href="#" onclick="unFlip('{{ flipper_id }}'); return false" style="display: none;">Less details</a>
-    <div class="details" id="{{ flipper_id }}">
-      {% block flipper_contents %}
-      {% endblock %}
+  <div class="accordian" id="{{ flipper_id }}">
+    <div class="accordian-group">
+      <div class="accordian-heading">
+        <a class="accordian-toggle" data-toggle="collapse" data-present="#{{ flipper_id }}" href="#{{ flipper_id}}One">
+          More details
+        </a>
+      </div>
+      <div id="{{ flipper_id}}One" class="accordian-body collapse">
+        <div class="accordian-inner">
+          {% block flipper_contents %}
+          {% endblock %}
+        </div>
+      </div>
     </div>
+  </div>
   {% endif %}
 </div>
 

@@ -1,9 +1,12 @@
 <!--- Open Source and Free Software experience segment follows -->
 {% from "templates/functions.html" import secHeader %}
 
-<div class="container">
+<div class="container"><div class="row-fluid">
+<div class="span3">
 {{ secHeader("Open Source and Free Software Experience", "fossExp") }} 
 
+</div>
+<div class="span9">
   {% include '2010-2012-lca.html' %}
   {% include '2008-mimicware.html' %}
   {% include '2001-2007-tux4kids.html' %}
@@ -14,5 +17,6 @@
   {% include '2001-aethera.html' %}
   {% include '1999-sdl.html' %}
 </div>
+</div></div>
 
 <!--- End Open Source and Free Software  experience segment -->
