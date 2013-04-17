@@ -1,7 +1,8 @@
 <div class="container">
+  <section id="{{ atom_id}}">
   <div class="row-fluid">
     <div class="span3">
-      <a id="{{ atom_id }}"><h2>{{ atom_name }}</h2></a>
+      <h2>{{ atom_name }}</h2>
       <p class="muted"><small><a href="#top">[ Top ]</a></small></p>
     </div>
 
@@ -9,4 +10,5 @@
       {% block details %}{% endblock %}
     </div>
   </div>
+  </section>
 </div>
