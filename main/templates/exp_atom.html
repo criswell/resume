@@ -1,10 +1,14 @@
-<div class="experience_title">
-    <a id="{{ atom_id }}"><h2>{{ atom_name }}</h2></a>
-    <div class="quicklinks"><ul><li><a href="#top">[ Top ]</a></li></ul></div>
-</div>
-
-<div class="experience_details">
-    <div class="experience">
-        {% block details %}{% endblock %}
+<div class="container">
+  <section id="{{ atom_id}}">
+  <div class="row-fluid">
+    <div class="span3">
+      <h2>{{ atom_name }}</h2>
+      <p class="muted"><small><a href="#top">[ Top ]</a></small></p>
     </div>
+
+    <div class="span9">
+      {% block details %}{% endblock %}
+    </div>
+  </div>
+  </section>
 </div>
