@@ -46,18 +46,14 @@
 {% include 'css/000.html' %}
 {% include 'js/000.html' %}
   </head>
-  <body>
+  <body data-spy="scroll" data-target='.navbar'>
+    {% include 'navbar.html' %}
     {% include 'header.html' %}
-    <div class="resume_body">
-      <!-- <div class="experience_details"> -->
-        {% include 'summary.html' %}
-        {% include 'job_exp/000.html' %}
-        {% include 'oss_exp/000.html' %}
-        {% include 'skills.html' %}
-        {% include 'references.html' %}
-      <!-- </div> -->
-
-    </div>
+      {% include 'summary.html' %}
+      {% include 'job_exp/000.html' %}
+      {% include 'oss_exp/000.html' %}
+      {% include 'skills.html' %}
+      {% include 'references.html' %}
     {% include 'footer.html' %}
   </body>
 </html>

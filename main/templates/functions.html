@@ -19,8 +19,6 @@
 {%- endmacro %}
 
 {% macro secHeader(title, secID, hideable=False) -%}
-  <div class="experience_title">
-    <a id="{{ secID }}"><h2>{{ title }}</h2></a>
-    <div class="quicklinks"><ul><li><a href="#top">[ Top ]</a></li></ul></div>
-  </div>
+  <section id="{{ secID }}"><h2>{{ title }}</h2></section>
+  <p class="muted"><small><a href="#top">[ Top ]</a></small></p>
 {%- endmacro %}
