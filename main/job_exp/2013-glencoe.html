@@ -1,0 +1,31 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Software Engineer{% endblock %}
+{% block timeframe %}June 2013 - present{% endblock %}
+{% block company %}
+Glencoe Software, Dundee, UK{{ br() }}
+{{ link("http://www.glencoesoftware.com/") }}
+{% endblock %}
+{% block desc %}
+  Contributor to the <a href="https://www.openmicroscopy.org/">Open Microscopy
+  Environment</a> project as well as developer of custom tools and OME extensions
+  for Glencoe Software customers and support including adding annotation support
+  on the OMERO command line and REDIS support for the OMERO caching backend.
+  One of the initial developers on the <a
+  href="https://github.com/glencoesoftware/corgi">Corgi project</a>, developer
+  and data wrangler for the OMERO instance running at the <a 
+  href="http://jcb-dataviewer.rupress.org/">JCB Dataviewer</a>, and various
+  development roles in <a href="https://github.com/glencoesoftware">other
+  Glencoe Software Github projects</a>. Software engineering primarily in
+  Python, Java, and shell.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="gs" %}
+{% block flipper_contents %}
+{{ list(["Python development",
+         "Java development",
+         "System engineering",
+         "Bash/shell scripting development",
+         "High performance software caching",
+         "API, user and community documentation authoring"]) }}
+{% endblock %}
