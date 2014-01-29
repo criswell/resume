@@ -39,6 +39,13 @@ Once this is done, you can build and test the resume with:
 This will build the resume, place it in output/, and report whether the
 document is valid HTML5 or not.
 
+What does the end result look like?
+===================================
+
+My latest resume builds can be found here:
+
+* http://criswell.bitbucket.org/
+
 What is "experimental"?
 =======================
 
