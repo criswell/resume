@@ -44,7 +44,7 @@ What does the end result look like?
 
 My latest resume builds can be found here:
 
-* http://criswell.bitbucket.org/
+* [criswell.bitbucket.org](http://criswell.bitbucket.org/)
 
 What is "experimental"?
 =======================
