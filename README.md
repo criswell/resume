@@ -40,6 +40,7 @@ This will build the resume, place it in output/, and report whether the
 document is valid HTML5 or not.
 
 You can also do rudimentary spell checking using:
+
     $ make spell
 
 Note that this requires [links](http://links.twibright.com/) and [GNU
