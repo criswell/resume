@@ -14,7 +14,7 @@ test: $(OUTPUT)
 	./validate/html5check.py --encoding=utf-8 output/index.html
 
 spell: $(OUTPUT)
-	links output/index.html -dump | aspell list --personal=./.aspell.en.pws 
+	links output/index.html -dump | aspell list --personal=./.aspell.en.pws
 
 .PHONY: clean
 
