@@ -1,0 +1,17 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer{% endblock %}
+{% block timeframe %}Oct. 1998 - present{% endblock %}
+{% block company %}
+Noink CMS{{ br() }}
+{{ link("https://bitbucket.org/criswell/noink") }}
+{% endblock %}
+{% block desc %}
+Noink is a web-based content management system. It was originally designed
+in 1998 to power various online web-comics and was written in Perl. It was
+later rewritten in Python to be a more generic CMS similar to Drupal. Currently,
+it is Python-based and utilizes the <a href="http://flask.pocoo.org/">Flask
+microframework</a>. It is designed to be a hybrid of dynamic and static content
+creation, and can be hosted in a fully dynamic fashion as well as generate
+static content.
+{% endblock %}
