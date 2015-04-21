@@ -1,0 +1,20 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Configuration and Build Management{% endblock %}
+{% block timeframe %}April 2015 - present{% endblock %}
+{% block company %}
+Angie's List, Indianapolis, IN{{ br() }}
+{{ link("http://www.angieslist.com/") }}
+{% endblock %}
+{% block desc %}
+  Configuration and Build Management.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="sh" %}
+{% block flipper_contents %}
+{{ list(["Git administration",
+         "Ruby development",
+         "Docker engineering",
+         "System engineering",
+         "Bash/shell scripting development"]) }}
+{% endblock %}
