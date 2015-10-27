@@ -1,0 +1,15 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer{% endblock %}
+{% block timeframe %}Sept. 2015 - present{% endblock %}
+{% block company %}
+circle-stats{{ br() }}
+{{ link("https://github.com/criswell/circle-stats") }}
+{% endblock %}
+{% block desc %}
+The missing statistics dashboard for CircleCI. Written in Python, it collects,
+analyzes, and displays organizational usage statistics from CircleCI. Displays
+build averages, top-built branches, build failures, and many more. Extensible
+and easily configurable. Developed as an Open Source project while part of
+Angie's List.
+{% endblock %}

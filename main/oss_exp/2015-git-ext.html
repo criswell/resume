@@ -1,0 +1,16 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Lead Developer{% endblock %}
+{% block timeframe %}July 2015 - present{% endblock %}
+{% block company %}
+Various Git Extensions{{ br() }}
+{{ link("https://github.com/criswell/github-reflog") }}
+{{ link("https://github.com/criswell/git-circle") }}
+{% endblock %}
+{% block desc %}
+Authored various Git extensions which provide additional functionality to the
+Git command-line. 'github-reflog' adds a reference log like interface for
+interacting with repositories hosted on Github. 'git-circle' allows users to
+access all of the features available from CircleCI from the git command-line.
+Both tools are written in Python, and easily installable from PyPI sources.
+{% endblock %}
