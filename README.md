@@ -51,7 +51,7 @@ What does the end result look like?
 
 My latest resume builds can be found here:
 
-* [criswell.bitbucket.org](http://criswell.bitbucket.org/)
+* [hartsn.github.io](http://hartsn.github.io/)
 
 What is "experimental"?
 =======================
