@@ -1,0 +1,10 @@
+*~
+~*
+*.bak
+.~lock*
+*.swp
+*.kate-swp
+tags
+*.pyc
+.directory
+output/*
