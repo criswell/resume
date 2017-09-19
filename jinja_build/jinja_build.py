@@ -13,10 +13,11 @@ except ImportError:
 hg_id = 'Unknown'
 hg_branch = 'Unknown'
 hg_update = 'Unknown'
-try:
-    import hgapi
-except ImportError:
-    hgapi = None
+hgapi = None
+#try:
+#    import hgapi
+#except ImportError:
+#    hgapi = None
 
 def usage():
     print "jinga_build.py file.html repo_directory <templateDirectories>"
@@ -51,9 +52,9 @@ else:
 
 builder = {
             'date' : '%s' % datetime.datetime.now(),
-            'id' : hg_id,
-            'branch' : hg_branch,
-            'updated' : hg_update.date
+#            'id' : hg_id,
+#            'branch' : hg_branch,
+#            'updated' : hg_update.date
         }
 
 template = env.from_string(strTemplate)
