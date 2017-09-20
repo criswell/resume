@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, datetime, os
+import sys, datetime, os, subprocess
 try:
     from jinja2 import Template
     from jinja2 import FileSystemLoader
@@ -13,11 +13,6 @@ except ImportError:
 hg_id = 'Unknown'
 hg_branch = 'Unknown'
 hg_update = 'Unknown'
-hgapi = None
-#try:
-#    import hgapi
-#except ImportError:
-#    hgapi = None
 
 def usage():
     print "jinga_build.py file.html repo_directory <templateDirectories>"
@@ -25,6 +20,9 @@ def usage():
     print "<templateDirectories> is one or more directories for templates to be housed,"
     print "separated by commas.\n"
     print "'repo_directory' is the path to the hg repo containing the resume builder."
+
+def runcmd(cmd):
+    return subprocess.check_output(cmd.split(' '))
 
 if len(sys.argv) < 2 or len(sys.argv) > 4:
     usage()
@@ -35,11 +33,13 @@ templateFile = open(filename, 'r')
 rawTemplate = templateFile.readlines()
 templateFile.close()
 
-if hgapi:
-    repo = hgapi.Repo(sys.argv[2])
-    hg_id = repo.hg_id()
-    hg_branch = repo.hg_branch()
-    hg_update = repo.revision(hg_id)
+#hg_branch = runcmd('git symbolic-ref HEAD 2>/dev/null')
+
+#if hgapi:
+#    repo = hgapi.Repo(sys.argv[2])
+#    hg_id = repo.hg_id()
+#    hg_branch = repo.hg_branch()
+#    hg_update = repo.revision(hg_id)
 
 strTemplate = "".join(rawTemplate)
 
