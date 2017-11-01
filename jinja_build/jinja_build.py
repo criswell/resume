@@ -6,8 +6,8 @@ try:
     from jinja2 import FileSystemLoader
     from jinja2.environment import Environment
 except ImportError:
-    print >> sys.stderr, "Uh-oh! Looks like you don't have jinja2 installed!"
-    print >> sys.stderr, "Go to http://jinja.pocoo.org/ and install it please!"
+    print("Uh-oh! Looks like you don't have jinja2 installed!")
+    print("Go to http://jinja.pocoo.org/ and install it please!")
     sys.exit(1)
 
 hg_id = 'Unknown'
@@ -15,11 +15,11 @@ hg_branch = 'Unknown'
 hg_update = 'Unknown'
 
 def usage():
-    print "jinga_build.py file.html repo_directory <templateDirectories>"
-    print "\nBuilds a file specified by 'file.html', dumping to STDOUT the resulting HTML.\n"
-    print "<templateDirectories> is one or more directories for templates to be housed,"
-    print "separated by commas.\n"
-    print "'repo_directory' is the path to the hg repo containing the resume builder."
+    print("jinga_build.py file.html repo_directory <templateDirectories>")
+    print("\nBuilds a file specified by 'file.html', dumping to STDOUT the resulting HTML.\n")
+    print("<templateDirectories> is one or more directories for templates to be housed,")
+    print("separated by commas.\n")
+    print("'repo_directory' is the path to the hg repo containing the resume builder.")
 
 def runcmd(cmd):
     return subprocess.check_output(cmd.split(' '))
@@ -60,5 +60,5 @@ builder = {
 template = env.from_string(strTemplate)
 rendered = template.render(builder=builder)
 
-print rendered
+print(rendered)
 
