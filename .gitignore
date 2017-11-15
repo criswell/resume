@@ -8,3 +8,4 @@ tags
 *.pyc
 .directory
 output/*
+.DS_Store
