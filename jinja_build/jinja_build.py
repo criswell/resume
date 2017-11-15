@@ -10,9 +10,9 @@ except ImportError:
     print("Go to http://jinja.pocoo.org/ and install it please!")
     sys.exit(1)
 
-hg_id = 'Unknown'
-hg_branch = 'Unknown'
-hg_update = 'Unknown'
+#hg_id = 'Unknown'
+git_branch = 'Unknown'
+git_update = 'Unknown'
 
 def usage():
     print("jinga_build.py file.html repo_directory <templateDirectories>")
@@ -24,6 +24,48 @@ def usage():
 def runcmd(cmd):
     return subprocess.check_output(cmd.split(' '))
 
+def get_current_branch():
+    current_branch = None
+    try:
+        current_branch = runcmd('git symbolic-ref -q --short HEAD')
+        current_branch = current_branch.strip()
+    except subprocess.CalledProcessError:
+        current_branch = None
+
+    if isinstance(current_branch, bytes):
+        current_branch = current_branch.decode('utf-8')
+    return current_branch
+
+def get_latest_update():
+    update_date = None
+    try:
+        o = runcmd('git cat-file commit HEAD')
+        if isinstance(o, bytes):
+            o = o.decode('utf-8')
+        lines = o.split('\n')
+        for i in lines:
+            if i.startswith('author '):
+                l = i.split(' ')[-2]
+                update_date = datetime.datetime.fromtimestamp(
+                        int(l)).strftime('%Y-%m-%d %H:%M:%S')
+                break
+    except subprocess.CalledProcessError:
+        update_date = None
+
+    return update_date
+
+def get_rev_id():
+    revid = None
+    try:
+        revid = runcmd('git rev-parse HEAD')
+        revid = revid.strip()
+    except subprocess.CalledProcessError:
+        revid = None
+
+    if isinstance(revid, bytes):
+        revid = revid.decode('utf-8')
+    return revid
+
 if len(sys.argv) < 2 or len(sys.argv) > 4:
     usage()
     sys.exit()
@@ -33,13 +75,9 @@ templateFile = open(filename, 'r')
 rawTemplate = templateFile.readlines()
 templateFile.close()
 
-#hg_branch = runcmd('git symbolic-ref HEAD 2>/dev/null')
-
-#if hgapi:
-#    repo = hgapi.Repo(sys.argv[2])
-#    hg_id = repo.hg_id()
-#    hg_branch = repo.hg_branch()
-#    hg_update = repo.revision(hg_id)
+commit_id = get_rev_id()
+git_branch = get_current_branch()
+git_update = get_latest_update()
 
 strTemplate = "".join(rawTemplate)
 
@@ -52,9 +90,9 @@ else:
 
 builder = {
             'date' : '%s' % datetime.datetime.now(),
-#            'id' : hg_id,
-#            'branch' : hg_branch,
-#            'updated' : hg_update.date
+            'id' : commit_id,
+            'branch' : git_branch,
+            'updated' : git_update
         }
 
 template = env.from_string(strTemplate)
