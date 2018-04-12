@@ -1,0 +1,31 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Technical Lead / Technical Manager{% endblock %}
+{% block timeframe %}October 2017 - present{% endblock %}
+{% block company %}
+Gun.io / 128x8.com{{ br() }}
+{{ link("http://gun.io/") }}
+{{ link("http://128x8.com/") }}
+{% endblock %}
+{% block desc %}
+    Technical manager and technical lead on a variety of consultancy projects.
+    Managed teams implementing DevOps best practices, containerization of
+    projects, solving scaling problems, setting up and optimizing continuous
+    integration and delivery of code. Management of services and software
+    running in AWS, Google Cloud, and other cloud providers, powered by
+    Docker, Kubernetes, and other container technologies.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="ang" %}
+{% block flipper_contents %}
+{{ list(["Git administration",
+         "Python development",
+         "Build optimization",
+         "AWS",
+         "Google Cloud",
+         "k8s",
+         "Integration of build, testing and DVCS tools",
+         "Docker engineering",
+         "System engineering",
+         "Bash/shell scripting development"]) }}
+{% endblock %}
