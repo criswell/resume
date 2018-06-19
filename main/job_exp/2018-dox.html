@@ -1,0 +1,22 @@
+{% extends "templates/exp.html" %}
+{% from "templates/functions.html" import link, list, br %}
+{% block title %}Data Test Automation Lead{% endblock %}
+{% block timeframe %}May 2018 - present{% endblock %}
+{% block company %}
+Doximity, San Fransisco, CA{{ br() }}
+{{ link("https://www.doximity.com/") }}
+{% endblock %}
+{% block desc %}
+    Test Automation Lead for the Data team.
+{% endblock %}
+{% set flipper=True %}
+{% set flipper_id="ang" %}
+{% block flipper_contents %}
+{{ list(["Git administration",
+         "Python development",
+         "Build optimization",
+         "Integration of build, testing and DVCS tools",
+         "Docker engineering",
+         "CircleCI",
+         "Bash/shell scripting development"]) }}
+{% endblock %}
