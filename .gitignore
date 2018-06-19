@@ -9,3 +9,4 @@ tags
 .directory
 output/*
 .DS_Store
+Pipfile.lock
